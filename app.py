@@ -6,14 +6,14 @@ import pandas as pd
 from data_manager import load_data, save_data, SUBJECT_COLS
 from analytics import enrich_records, subject_wise_average, get_top_performers
 
-# --- 1. PAGE CONFIG ---
+# 1.PAGE CONFIG 
 st.set_page_config(
     page_title="Teyzix Core | Advanced Analytics Dashboard",
     page_icon="🎓",
     layout="wide"
 )
 
-# --- 2. PREMIUM JET-BLACK EXECUTIVE CSS LAYER ---
+#  2. PREMIUM JET-BLACK CSS LAYER
 st.markdown("""
     <style>
     /* Google Fonts Import for Elite Typography */
@@ -141,12 +141,12 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- 3. DATA PERSISTENCE LAYER ---
+# 3. DATA PERSISTENCE LAYER 
 records = load_data()
 enriched = enrich_records(records)
 df_display = pd.DataFrame(enriched) if enriched else pd.DataFrame()
 
-# --- 4. SIDEBAR PANEL ---
+# 4. SIDEBAR PANEL
 with st.sidebar:
     st.markdown("<div style='padding-top: 15px;'></div>", unsafe_allow_html=True)
     st.markdown("<h2 style='color:#00F2FE; font-weight:700; font-size:26px; margin-bottom:5px;'>📝 Registration</h2>", unsafe_allow_html=True)
@@ -180,7 +180,7 @@ with st.sidebar:
                 st.success("Record Authenticated!")
                 st.rerun()
 
-# --- 5. EXECUTIVE HERO HEADER ---
+# 5. EXECUTIVE HERO HEADER
 st.markdown('<h1 class="giga-title">STUDENT ANALYTICS HUB</h1>', unsafe_allow_html=True)
 st.markdown('<div class="creator-badge">⚡ Developed by Miss Anabia</div>', unsafe_allow_html=True)
 st.markdown('<p class="sub-title">Advanced Modular Intelligence Platform for Teyzix Core Execution Framework.</p>', unsafe_allow_html=True)
@@ -195,7 +195,7 @@ if not df_display.empty:
 
 st.markdown("<div style='margin-top: 5px;'></div>", unsafe_allow_html=True)
 
-# --- 6. NAV INTERFACE ---
+# 6. NAV INTERFACE 
 tab1, tab2, tab3 = st.tabs(["📁 Database Explorer", "📊 Performance Analytics", "🎨 Visual Gallery"])
 
 with tab1:
@@ -246,7 +246,7 @@ with tab3:
         
         img_cols = st.columns(3)
         
-        # --- CHART 1: Subject Performance Index ---
+        #  CHART 1: Subject Performance Index
         with img_cols[0]:
             st.markdown("<div style='background: rgba(13, 18, 30, 0.9); padding: 12px; border-radius: 10px; border: 1px solid rgba(0, 242, 254, 0.08); text-align:center; font-weight:700; color:#FFFFFF; margin-bottom:12px;'>📊 Subject Performance Index</div>", unsafe_allow_html=True)
             
@@ -273,7 +273,7 @@ with tab3:
                 
             st.pyplot(fig1)
             
-        # --- CHART 2: Class Performance Distribution ---
+        # CHART 2: Class Performance Distribution 
         with img_cols[1]:
             st.markdown("<div style='background: rgba(13, 18, 30, 0.9); padding: 12px; border-radius: 10px; border: 1px solid rgba(0, 242, 254, 0.08); text-align:center; font-weight:700; color:#FFFFFF; margin-bottom:12px;'>🏫 Cohort Performance Distribution</div>", unsafe_allow_html=True)
             
@@ -298,7 +298,7 @@ with tab3:
                 
             st.pyplot(fig2)
             
-        # --- CHART 3: Academic Merit Matrix ---
+        #  CHART 3: Academic Merit Matrix
         with img_cols[2]:
             st.markdown("<div style='background: rgba(13, 18, 30, 0.9); padding: 12px; border-radius: 10px; border: 1px solid rgba(0, 242, 254, 0.08); text-align:center; font-weight:700; color:#FFFFFF; margin-bottom:12px;'>🏆 Academic Merit Matrix</div>", unsafe_allow_html=True)
             
@@ -333,7 +333,7 @@ with tab3:
         
     st.markdown('</div>', unsafe_allow_html=True)
 
-# --- 7. FOOTER PLATFORM AUDIT ---
+# 7. FOOTER PLATFORM AUDIT
 st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)
 st.markdown("<hr style='border-color: rgba(255,255,255,0.03);'>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; color: #4B5563; font-size: 12px; font-weight:600;'>ENGINE CONFIG: STREAMLIT SAAS CORE PLATFORM EDITION V3.0 | DESIGNED BY MISS ANABIA FOR TEYZIX CORE INTERNSHIP AUDIT</p>", unsafe_allow_html=True)
