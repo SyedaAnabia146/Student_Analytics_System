@@ -8,20 +8,20 @@ from visualizer import run_visualizations
 
 
 def print_menu():
-    print("\n========================================")
+    print("\n")
     print("   Student Performance Analytics System")
-    print("========================================")
+    print("")
     print(" 1. View All Students")
     print(" 2. Add New Student")
     print(" 3. Update Student Marks")
     print(" 4. Delete Student")
-    print(" ----------------------------------------")
+    print(" ")
     print(" 5. Performance Summary (Grades & Totals)")
     print(" 6. Analytics Dashboard")
     print(" 7. Export Summary Report (CSV)")
     print(" 8. Show Visualizations (Charts)")
     print(" 0. Exit")
-    print("----------------------------------------")
+    print("")
 
 
 def analytics_dashboard(records):
